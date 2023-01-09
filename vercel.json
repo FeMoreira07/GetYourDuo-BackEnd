@@ -3,21 +3,13 @@
   "public" : true,
   "builds": [
     {
-       "src": "src/server.ts", "use": "@vercel/node" 
+       "src": "./src/server.ts", "use": "@vercel/node" 
     }
   ],
   "routes":[
     {
       "src": "/games",
-      "dest": "src/server.ts"
-    },
-    {
-      "src": "/games",
-      "methods":[
-        "POST",
-        "GET"
-      ],
-      "dest": "/games"
+      "dest": "./src/server.ts"
     }
   ]
 }
