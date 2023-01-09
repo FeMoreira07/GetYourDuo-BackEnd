@@ -8,11 +8,11 @@
   ],
   "routes":[
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "src/server.ts"
     },
     {
-      "src": "/games",
+      "src": "src/server.ts",
       "methods":[
         "POST",
         "GET"
