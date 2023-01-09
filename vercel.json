@@ -8,7 +8,7 @@
   ],
   "routes":[
     {
-      "src": "/cu",
+      "src": "/games",
       "dest": "src/server.ts"
     },
     {
