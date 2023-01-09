@@ -17,7 +17,7 @@
         "POST",
         "GET"
       ],
-      "dest": "src/server.ts"
+      "dest": "/games"
     }
   ]
 }
