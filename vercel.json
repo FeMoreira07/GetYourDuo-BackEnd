@@ -13,6 +13,10 @@
     },
     {
       "src": "/games",
+      "methods":[
+        "POST",
+        "GET"
+      ],
       "dest": "src/server.ts"
     }
   ]
