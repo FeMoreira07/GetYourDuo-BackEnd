@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --output public",
     "dev": "tsnd --exit-child src/server.ts"
   },
   "keywords": [],
