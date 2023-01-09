@@ -8,7 +8,7 @@
   ],
   "routes":[
     {
-      "src": "/games/:id/ads",
+      "src": "games/:id/ads",
       "dest": "src/server.ts"
     },
     {
