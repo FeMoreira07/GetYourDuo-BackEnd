@@ -12,7 +12,7 @@
       "dest": "src/server.ts"
     },
     {
-      "src": "src/server.ts",
+      "src": "/games",
       "methods":[
         "POST",
         "GET"
