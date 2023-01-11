@@ -1,14 +1,14 @@
 import express from "express";
-import cors from "cors"
+import cors from "cors";
 import { PrismaClient } from "@prisma/client";
 import { convertHourStringToMinutes } from "./utils/convert-hour-string-to-minutes";
 import { converMinutesToHourString } from "./utils/convert-minutes-to-hour-string";
 
 const app = express();
 
-app.use(express.json());
-app.use(cors())
 
+app.use(express.json());
+app.use(cors());
 
 const prisma = new PrismaClient({
   log: ["query"],
@@ -29,8 +29,8 @@ app.get("/games", async (resquest, response) => {
 
 app.post("/games/:id/ads", async (request, response) => {
   const gameId = request.params.id;
-  const body:any = request.body;
-  const ad:any = await prisma.ad.create({
+  const body: any = request.body;
+  const ad: any = await prisma.ad.create({
     data: {
       gameId,
       name: body.name,
@@ -92,5 +92,7 @@ app.get("/ads/:id/discord", async (request, response) => {
     discord: ad.discord,
   });
 });
+
+
 
 app.listen(3000);

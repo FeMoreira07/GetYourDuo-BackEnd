@@ -6,21 +6,27 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 model Game {
-  id        String @id @default(uuid())
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
   title     String
   bannerUrl String
   ads       Ad[]
 }
 
+model Post {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  title String
+  body  String
+}
+
 model Ad {
-  id              String   @id @default(uuid())
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
   name            String
-  gameId          String
+  gameId          String   @db.ObjectId
   yearsPlaying    Int
   discord         String
   weekDays        String
