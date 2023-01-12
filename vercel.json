@@ -8,11 +8,7 @@
   ],
   "routes":[
     {
-      "src": "/",
-      "dest": "src/server.ts"
-    },
-    {
-      "src": "https://get-your-duo-back-end.vercel.app/games",
+      "src": "/(.*)",
       "dest": "src/server.ts"
     }
   ]
