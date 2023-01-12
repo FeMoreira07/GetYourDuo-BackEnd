@@ -14,7 +14,7 @@ const prisma = new PrismaClient({
   log: ["query"],
 });
 
-app.get("/games", async (resquest, response) => {
+app.get("https://get-your-duo-back-end.vercel.app//games", async (resquest, response) => {
   const games = await prisma.game.findMany({
     include: {
       _count: {
