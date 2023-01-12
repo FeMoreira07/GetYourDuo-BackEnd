@@ -4,7 +4,10 @@
   "builds": [
     {
        "src": "api/server.ts", "use": "@vercel/node" 
-    }
+    },
+    {
+      "src": "api/test.ts", "use": "@vercel/node" 
+   }
   ],
   "routes":[
     {
