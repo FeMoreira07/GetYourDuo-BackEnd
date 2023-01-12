@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "mongodb"
-  url      = env("DATABASE_URL")
+  url      = "mongodb+srv://femoreira07:72ZRRF3qOH38YKY5@cluster0.phecyol.mongodb.net/Test?retryWrites=true&w=majority"
 }
 
 model Game {
