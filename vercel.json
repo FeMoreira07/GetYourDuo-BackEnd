@@ -12,7 +12,7 @@
       "dest": "src/server.ts"
     },
     {
-      "src": "/games",
+      "src": "https://get-your-duo-back-1pncya4uo-femoreira07.vercel.app/games",
       "dest": "src/server.ts"
     }
   ]
