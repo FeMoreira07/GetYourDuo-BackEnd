@@ -6,7 +6,6 @@ import { converMinutesToHourString } from "./utils/convert-minutes-to-hour-strin
 
 const app = express();
 
-
 app.use(express.json());
 app.use(cors());
 
@@ -15,6 +14,7 @@ const prisma = new PrismaClient({
 });
 
 app.get("/games", async (resquest, response) => {
+  console.log({ BEFORE: new Date() });
   const games = await prisma.game.findMany({
     include: {
       _count: {
@@ -24,6 +24,7 @@ app.get("/games", async (resquest, response) => {
       },
     },
   });
+  console.log({ AFTER: new Date() });
   return response.json(games);
 });
 
@@ -93,9 +94,6 @@ app.get("/ads/:id/discord", async (request, response) => {
   });
 });
 
-
-module.exports = app
-
-
+module.exports = app;
 
 app.listen(3000);
