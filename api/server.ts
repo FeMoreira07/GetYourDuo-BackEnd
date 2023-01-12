@@ -14,7 +14,6 @@ const prisma = new PrismaClient({
 });
 
 app.get("/games", async (resquest, response) => {
-  console.log({ BEFORE: new Date() });
   const games = await prisma.game.findMany({
     include: {
       _count: {
@@ -24,7 +23,6 @@ app.get("/games", async (resquest, response) => {
       },
     },
   });
-  console.log({ AFTER: new Date() });
   return response.json(games);
 });
 
